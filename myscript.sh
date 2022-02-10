@@ -1,20 +1,15 @@
 #!/bin/sh 
 ls
-file="/var/jenkins_home/workspace/Test/employees.csv"
+file="employees.csv"
 pwd
 
-while read -r line
+while read f1 f2 f3
 do
-    field1=$(echo "$line" | awk -F'|' '{printf "%s", $1}' | tr -d '"')
-    field2=$(echo "$line" | awk -F'|' '{printf "%s", $2}' | tr -d '"')
+        echo "OS is     : $f1"
+        echo "Company is: $f2"
+        echo "Value is  : $f3"
+done < $file
 
-    echo "$field1 $field2"
-done < employees.csv
-
-while IFS=, read -r col1 col2
-do
-    echo "I got:$col1|$col2"
-done < employees.csv
 
 INPUT="employees.csv"
 OLDIFS=$IFS
