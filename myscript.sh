@@ -3,7 +3,13 @@ ls
 file="/var/jenkins_home/workspace/Test/employees.csv"
 pwd
 
+while read -r line
+do
+    field1=$(echo "$line" | awk -F'|' '{printf "%s", $1}' | tr -d '"')
+    field2=$(echo "$line" | awk -F'|' '{printf "%s", $2}' | tr -d '"')
 
+    echo "$field1 $field2"
+done < employees.csv
 
 while IFS=, read -r col1 col2
 do
