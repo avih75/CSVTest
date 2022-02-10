@@ -2,6 +2,14 @@
 ls
 file="/var/jenkins_home/workspace/Test/employees.csv"
 pwd
+
+
+
+while IFS=, read -r col1 col2
+do
+    echo "I got:$col1|$col2"
+done < employees.csv
+
 INPUT="employees.csv"
 OLDIFS=$IFS
 IFS=','
