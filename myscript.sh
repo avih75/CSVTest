@@ -3,7 +3,7 @@ ls
 file="employees.csv"
 pwd
 
-INPUT= "employees.csv"
+INPUT= employees.csv
 OLDIFS=$IFS
 IFS=,
 [ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
