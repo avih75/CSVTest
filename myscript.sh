@@ -2,7 +2,7 @@
 ls
 file="employees.csv"
 pwd
-
+cat employees.csv
 INPUT= employees.csv
 OLDIFS=$IFS
 IFS=,
