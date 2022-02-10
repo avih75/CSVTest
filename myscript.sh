@@ -3,6 +3,7 @@ ls
 file="employees.csv"
 pwd
 cat $(employees.csv)
+cd employees.csv
 INPUT= employees.csv
 OLDIFS=$IFS
 IFS=,
