@@ -6,7 +6,7 @@ pwd
 INPUT= employees.csv
 OLDIFS=$IFS
 IFS=,
-[ ! -f $INPUT ] && { echo "$INPUT file not found"; exit 99; }
+[ ! -f $file ] && { echo "$file file not found"; exit 99; }
 while read site post subject usr status
 do
     echo "Site : $site"
@@ -14,5 +14,5 @@ do
     echo "Subject : $subject"
     echo "User : $usr"
     echo "Status : $status"
-done < $INPUT
+done < $file
 IFS=$OLDIFS
