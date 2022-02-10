@@ -1,7 +1,7 @@
 #!/bin/sh 
 ls
 file="/var/jenkins_home/workspace/Test/employees.csv"
-
+pwd
 INPUT="/var/jenkins_home/workspace/Test/employees.csv"
 OLDIFS=$IFS
 IFS=','
